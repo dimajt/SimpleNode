@@ -75,7 +75,7 @@ var server = function(req, res) {
 	
 	log.request(path, type)
 
-	fs.readFile('../' + path, function(err, code) {
+	fs.readFile(path, function(err, code) {
 		if (err) {
 			log.notFound();
 			res.end('error 404');
